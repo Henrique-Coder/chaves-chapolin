@@ -1,5 +1,5 @@
 import streamlit as st
-from yaml import safe_load as yl_safe_load
+from yaml import safe_load
 
 
 page_title = 'Assista: Chaves & Chapolin'
@@ -92,7 +92,7 @@ if col1_2.button('**Chapolin Colorado**',
 
         def show_chapolin():
             with open('informacoes_seriados/chapolin/info.yaml', 'r') as file:
-                series = yl_safe_load(file)
+                series = safe_load(file)
                 for season_number, season in series['seasons'].items():
                     col_btn1_t1.button(f'**Exibir a {season["title"]}**',
                                        on_click=show_season,
