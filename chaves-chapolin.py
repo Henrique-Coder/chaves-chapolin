@@ -39,8 +39,7 @@ def show_video(video_url, thumb_url, duration):
     ''', unsafe_allow_html=True)
     st.write(f'''
     <iframe frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen" width="235" height="132"
-        src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=true&loop=true&url={video_url}&poster={thumb_url}&time=true&progressBar=true&overlay=true&muteButton=true&fullscreenButton=true&style=light&quality=auto&playButton=true">
-    <div id="duration" style="position:absolute; bottom: 0; left: 0; color: white; background-color: rgba(0,0,0,0.7); padding: 2px 4px; font-size: 12px;"></div>
+        src="https://onelineplayer.com/player.html?autoplay=false&autopause=true&muted=false&loop=false&url={video_url}&poster={thumb_url}&time=true&progressBar=true&overlay=true&muteButton=false&fullscreenButton=true&style=light&quality=auto&playButton=false">
     </iframe>
     <div class="duration-box">{duration}</div>
     ''', unsafe_allow_html=True)
